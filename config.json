@@ -1,0 +1,15 @@
+{
+    "ip_range": "192.168.1.0/24",
+    "output_file": "network_devices_log.csv",
+    "enable_desktop_notifications": true,
+    "enable_email_notifications": false,
+    "smtp_settings": {
+        "enabled": false,
+        "server": "smtp.mail.yahoo.com",
+        "port": 587,
+        "sender_email": "you@example.com",
+        "receiver_email": "you@example.com",
+        "sms_gateway": "",
+        "app_password": "your_app_password_here"
+    }
+}
