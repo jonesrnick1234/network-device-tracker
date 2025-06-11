@@ -127,3 +127,40 @@ In `config.json`:
   "app_password": "your_yahoo_app_password"
 }
 ```
+
+## 🕒 Running Automatically (Optional: Task Scheduler)
+
+To get alerts **without manually running the script**, you can use **Windows Task Scheduler** to:
+
+- ✅ Run the script daily (e.g., every day at noon)
+- ✅ Run it at system startup or user login
+
+### ✅ Step-by-Step Setup (Windows)
+
+1. Open **Task Scheduler** (`Win + S` → search “Task Scheduler”)
+2. Click **Create Task** (not Basic Task)
+3. In the **General** tab:
+   - Name: `Network Device Tracker`
+   - Check ✅ "Run with highest privileges"
+4. In the **Triggers** tab:
+   - Add new → Choose **Daily** at 12:00 PM
+   - Add another trigger → **At log on**
+5. In the **Actions** tab:
+   - Action: Start a program
+   - **Program/script:** `python`
+   - **Add arguments:**  
+     ```
+     "C:\Path\To\tracker.py"
+     ```
+   - **Start in:**  
+     ```
+     C:\Path\To\Your\Project\Folder
+     ```
+6. Save and test by right-clicking the task → **Run**
+
+---
+
+### ⚠️ Important Notes
+- Your computer **must be powered on and connected to your network** for the scan to run.
+- If it’s asleep or shut down, no scan or alerts will occur.
+- For best results, run on a desktop PC or a small home server that stays on.
