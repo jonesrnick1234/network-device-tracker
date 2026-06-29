@@ -109,7 +109,7 @@ Most carriers allow sending texts via email-to-SMS gateways.
 
 In `config.json`:
 ```json
-"sms_gateway": "4405069467@tmomail.net"
+"sms_gateway": "5555555555@tmomail.net"
 ```
 
 ---
@@ -123,7 +123,7 @@ In `config.json`:
   "port": 587,
   "sender_email": "your_email@yahoo.com",
   "receiver_email": "your_email@yahoo.com",
-  "sms_gateway": "4405069467@tmomail.net",
+  "sms_gateway": "5555555555@tmomail.net",
   "app_password": "your_yahoo_app_password"
 }
 ```
