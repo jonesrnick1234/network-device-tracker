@@ -131,6 +131,15 @@ The computer must be on and connected to the network for scheduled scans to run.
 
 When Nmap does not report a manufacturer, the tool looks up the MAC address prefix (first three octets only) at [api.macvendors.com](https://macvendors.com/).
 
+## Testing
+
+```powershell
+pip install -r requirements-dev.txt
+python -m pytest
+```
+
+The tests mock Nmap, email/SMS delivery, desktop notifications, and the vendor lookup, so they never scan a network or send a message. Each test runs in a temporary folder and leaves no log or config files behind.
+
 ## Limitations
 
 - Only devices that respond to Nmap host discovery from the scanning machine are found; firewalled or sleeping devices may be missed.
