@@ -1,0 +1,29 @@
+# Local configuration — may contain email/SMS credentials.
+# Copy config.example.json to config.json and keep config.json out of Git.
+config.json
+
+# Runtime output and device history
+*.csv
+*.log
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments and local environment files
+venv/
+.venv/
+env/
+.env
+.env.*
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
